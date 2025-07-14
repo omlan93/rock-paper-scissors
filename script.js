@@ -1,4 +1,3 @@
-console.log("Hello World!");
 let humanScore = 0;
 let computerScore = 0;
 
@@ -12,7 +11,7 @@ const getComputerChoice = () => {
 }
 
 const getHumanChoice = () => {
-    let humanChoice = prompt("Enter your choice")
+    let humanChoice = prompt("Enter your choice (rock, paper or scissors) :")
     // console.log(humanChoice.toLowerCase());
     return humanChoice.toLowerCase()
 }
@@ -20,9 +19,9 @@ const getHumanChoice = () => {
 const playRound = (humanChoice, computerChoice) => {
 
     humanChoice = getHumanChoice()
-    console.log(humanChoice);
+    // console.log(humanChoice);
     computerChoice = getComputerChoice()
-    console.log(computerChoice);
+    // console.log(computerChoice);
 
     if (humanChoice === computerChoice) {
         alert("Draw!")
@@ -53,13 +52,23 @@ const playRound = (humanChoice, computerChoice) => {
             computerScore++
             alert("You lose! Rock beats Scissors")
         }
-        else if (computerChoice === "papers") {
+        else if (computerChoice === "paper") {
             humanScore++;
-            alert("You win! Scissors beats Papers")
+            alert("You win! Scissors beats Paper")
         }
     }
 
 }
-playRound()
-console.log(humanScore)
-console.log(computerScore)
+
+const playGame = () => {
+    let roundNumber = prompt("How many rounds do you want to play?")
+
+    for (let i = 0; i < roundNumber; i++) playRound()
+
+    if (humanScore === computerScore) alert("It's a Draw!")
+    else if (humanScore > computerScore) alert("Congrats! You won the game!")
+    else alert("You lose the game! Better luck next time!")
+}
+playGame()
+// console.log(humanScore)
+// console.log(computerScore)
