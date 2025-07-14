@@ -30,31 +30,31 @@ const playRound = (humanChoice, computerChoice) => {
     if (humanChoice === "rock") {
         if (computerChoice === "paper") {
             computerScore++;
-            alert("You lose! Paper beats Rock")
+            alert("You Lose! Paper beats Rock")
         }
         else if (computerChoice === "scissors") {
             humanScore++;
-            alert("You win! Rock beats Scissors")
+            alert("You Win! Rock beats Scissors")
         }
     }
     else if (humanChoice === "paper") {
         if (computerChoice === "rock") {
             humanScore++;
-            alert("You win! Paper beats Rock")
+            alert("You Win! Paper beats Rock")
         }
         else if (computerChoice === "scissors") {
             computerScore++;
-            alert("You lose! Scissors beats Paper")
+            alert("You Lose! Scissors beats Paper")
         }
     }
     else if (humanChoice === "scissors") {
         if (computerChoice === "rock") {
             computerScore++
-            alert("You lose! Rock beats Scissors")
+            alert("You Lose! Rock beats Scissors")
         }
         else if (computerChoice === "paper") {
             humanScore++;
-            alert("You win! Scissors beats Paper")
+            alert("You Win! Scissors beats Paper")
         }
     }
 
@@ -65,9 +65,9 @@ const playGame = () => {
 
     for (let i = 0; i < roundNumber; i++) playRound()
 
-    if (humanScore === computerScore) alert("It's a Draw!")
-    else if (humanScore > computerScore) alert("Congrats! You won the game!")
-    else alert("You lose the game! Better luck next time!")
+    if (humanScore === computerScore) alert("It's a Draw!\nYour score : " + humanScore + ", Computer Score : " + computerScore)
+    else if (humanScore > computerScore) alert("Congrats! You won the game!\nYour score : " + humanScore + ", Computer Score : " + computerScore)
+    else alert("You lose the game! Better luck next time!\nYour score : " + humanScore + ", Computer Score : " + computerScore)
 }
 playGame()
 // console.log(humanScore)
