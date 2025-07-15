@@ -69,6 +69,6 @@ const playGame = () => {
     else if (humanScore > computerScore) alert("Congrats! You won the game!\nYour score : " + humanScore + ", Computer Score : " + computerScore)
     else alert("You lose the game! Better luck next time!\nYour score : " + humanScore + ", Computer Score : " + computerScore)
 }
-playGame()
+// playGame()
 // console.log(humanScore)
 // console.log(computerScore)
